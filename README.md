@@ -1,5 +1,9 @@
 ## Run Hadoop Cluster within Docker Containers
 
+*fork from kiwenlau/hadoop-cluster-docker*
+
+**update ubuntu to 20.04 and Hadoop to 3.3.1**
+
 - Blog: [Run Hadoop Cluster in Docker Update](http://kiwenlau.com/2016/06/26/hadoop-cluster-docker-update-english/)
 - 博客: [基于Docker搭建Hadoop集群之升级版](http://kiwenlau.com/2016/06/12/160612-hadoop-cluster-docker-update/)
 
@@ -12,13 +16,13 @@
 ##### 1. pull docker image
 
 ```
-sudo docker pull kiwenlau/hadoop:1.0
+sudo ./build-image.sh
 ```
 
 ##### 2. clone github repository
 
 ```
-git clone https://github.com/kiwenlau/hadoop-cluster-docker
+git clone https://github.com/heiheiyoyo/hadoop-cluster-docker
 ```
 
 ##### 3. create hadoop network
