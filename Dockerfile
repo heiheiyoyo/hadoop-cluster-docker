@@ -8,7 +8,7 @@ WORKDIR /root
 RUN sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list && \
     apt-get update && apt-get install -y openssh-server openjdk-11-jdk wget
 
-# install hadoop 2.7.2
+# install hadoop 3.3.1
 RUN wget https://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/hadoop-3.3.1/hadoop-3.3.1.tar.gz && \
     tar -xzvf hadoop-3.3.1.tar.gz && \
     mv hadoop-3.3.1 /usr/local/hadoop && \
@@ -42,7 +42,8 @@ RUN mv /tmp/ssh_config ~/.ssh/config && \
 RUN chmod +x ~/start-hadoop.sh && \
     chmod +x ~/run-wordcount.sh && \
     chmod +x $HADOOP_HOME/sbin/start-dfs.sh && \
-    chmod +x $HADOOP_HOME/sbin/start-yarn.sh 
+    chmod +x $HADOOP_HOME/sbin/start-yarn.sh && \
+    chmod 600 ~/.ssh/config
 
 # format namenode
 RUN /usr/local/hadoop/bin/hdfs namenode -format

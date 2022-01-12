@@ -1,7 +1,26 @@
 <?xml version="1.0"?>
 <configuration>
     <property>
+        <name>mapreduce.application.classpath</name>
+        <value>$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/*:$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/lib/*</value>
+    </property>
+    <property>
         <name>mapreduce.framework.name</name>
         <value>yarn</value>
+    </property>
+    <property>
+        <name>yarn.application.classpath</name>
+        <value>/usr/local/hadoop/etc/hadoop,
+        /usr/local/hadoop/share/hadoop/common/lib/*,
+        /usr/local/hadoop/share/hadoop/common/*,
+        /usr/local/hadoop/share/hadoop/hdfs,
+        /usr/local/hadoop/share/hadoop/hdfs/lib/*,
+        /usr/local/hadoop/share/hadoop/hdfs/*,
+        /usr/local/hadoop/share/hadoop/mapreduce/lib/*,
+        /usr/local/hadoop/share/hadoop/mapreduce/*,
+        /usr/local/hadoop/share/hadoop/yarn,
+        /usr/local/hadoop/share/hadoop/yarn/lib/*,
+        /usr/local/hadoop/share/hadoop/yarn/*
+        </value>
     </property>
 </configuration>
