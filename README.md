@@ -13,16 +13,19 @@
 
 ### 3 Nodes Hadoop Cluster
 
-##### 1. pull docker image
 
-```
-sudo ./build-image.sh
-```
-
-##### 2. clone github repository
+##### 1. clone github repository
 
 ```
 git clone https://github.com/heiheiyoyo/hadoop-cluster-docker
+```
+
+
+##### 2. build docker image
+
+```
+cd hadoop-cluster-docker
+sudo ./build-image.sh
 ```
 
 ##### 3. create hadoop network
@@ -34,7 +37,6 @@ sudo docker network create --driver=bridge hadoop
 ##### 4. start container
 
 ```
-cd hadoop-cluster-docker
 sudo ./start-container.sh
 ```
 
