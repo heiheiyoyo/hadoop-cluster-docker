@@ -48,6 +48,10 @@ done
 echo -e "\n\n"
 
 echo -e "Press [Enter] to Enter the Container"
+echo -e "You can also enter the container using command:"
+echo -e "\tssh root@localhost -p 2222"
+echo -e "and the password is root"
+
 read -n 1
 
 # get into hadoop master container
