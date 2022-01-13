@@ -23,4 +23,21 @@
         /usr/local/hadoop/share/hadoop/yarn/*
         </value>
     </property>
+    <property>
+        <name>mapred.job.tracker.http.address</name>
+        <value>0.0.0.0:50030</value>
+     </property>
+     <property>
+        <name>mapred.task.tracker.http.address</name>
+        <value>0.0.0.0:50060</value>
+     </property>      
+     <property>
+        <!--日志监控服务的地址，一般填写为namenode机器地址,我这里配置在cSlave0上 -->
+        <name>mapreduce.jobhistroy.address</name>
+        <value>0.0.0.0:10020</value>
+    </property>
+    <property>
+        <name>mapreduce.jobhistroy.webapp.address</name>
+        <value>0.0.0.0:19888</value>
+    </property>
 </configuration>
