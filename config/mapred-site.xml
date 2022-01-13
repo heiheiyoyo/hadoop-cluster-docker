@@ -32,7 +32,6 @@
         <value>0.0.0.0:50060</value>
      </property>      
      <property>
-        <!--日志监控服务的地址，一般填写为namenode机器地址,我这里配置在cSlave0上 -->
         <name>mapreduce.jobhistroy.address</name>
         <value>0.0.0.0:10020</value>
     </property>
