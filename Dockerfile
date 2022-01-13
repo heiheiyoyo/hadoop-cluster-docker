@@ -21,7 +21,14 @@ ENV PATH=$PATH:/usr/local/hadoop/bin:/usr/local/hadoop/sbin
 
 # ssh without key
 RUN ssh-keygen -t rsa -f ~/.ssh/id_rsa -P '' && \
-    cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+    cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys && \
+    echo "root:root" | chpasswd && \
+    sed -i '$a PermitRootLogin yes' /etc/ssh/sshd_config && \
+    sed -i "\$a for item in \`cat /proc/1/environ \|tr '\\\\0' '\\\\n'\`" /etc/profile && \
+    sed -i '$a do' /etc/profile && \
+    sed -i '$a export $item' /etc/profile && \
+    sed -i '$a done' /etc/profile
+
 
 RUN mkdir -p ~/hdfs/namenode && \ 
     mkdir -p ~/hdfs/datanode && \
