@@ -6,7 +6,7 @@ WORKDIR /root
 
 # install openssh-server, openjdk and wget
 RUN sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list && \
-    apt-get update && apt-get install -y openssh-server openjdk-11-jdk wget
+    apt-get update && apt-get install -y openssh-server openjdk-11-jdk wget net-tools
 
 # install hadoop 3.3.1
 RUN wget https://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/hadoop-3.3.1/hadoop-3.3.1.tar.gz && \
