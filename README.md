@@ -2,7 +2,12 @@
 
 *fork from kiwenlau/hadoop-cluster-docker*
 
-**update ubuntu to 20.04 and Hadoop to 3.3.1**
+**upgrade ubuntu to 20.04 and Hadoop to 3.3.1**
+
+![build-passing](https://img.shields.io/badge/build-passing-brightgreen.svg)
+![license-apache](https://img.shields.io/badge/license-Apache-blue.svg)
+![hadoop-3.3.1](https://img.shields.io/badge/hadoop-3.3.1-blue.svg)
+![ubuntu-20.04](https://img.shields.io/badge/ubuntu-20.04-orange.svg)
 
 - Blog: [Run Hadoop Cluster in Docker Update](http://kiwenlau.com/2016/06/26/hadoop-cluster-docker-update-english/)
 - 博客: [基于Docker搭建Hadoop集群之升级版](http://kiwenlau.com/2016/06/12/160612-hadoop-cluster-docker-update/)
